@@ -31,4 +31,20 @@ export default class Inventario{
         }
         
     }
+
+    listarInverso(){
+        if(this.inicio == null){
+            console.log("La lista está vacía :(")
+        }else{
+            let aux = this.inicio
+            while(aux.siguiente != null){
+                aux = aux.siguiente
+            }
+            console.log(aux)
+            while(aux.anterior != null){
+                console.log(aux.anterior)
+                aux = aux.anterior
+            }
+        }
+    }
 }

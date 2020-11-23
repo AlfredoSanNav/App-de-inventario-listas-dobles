@@ -1,3 +1,5 @@
+import Producto from './producto.js'
+
 export default class Inventario{
     constructor(){
         this.inicio = null
@@ -11,16 +13,22 @@ export default class Inventario{
             while(aux.siguiente != null){
                 aux = aux.siguiente
             }
+            aux.siguiente = producto
             aux.siguiente.anterior = aux
-            aux.siguiente = nuevo
         }
     }
 
     listar(){
-        aux = this.inicio
-        while(aux.siguiente != null){
+        if(this.inicio == null){
+            console.log("La lista está vacía :(")
+        }else{
+            let aux = this.inicio
             console.log(aux)
+            while(aux.siguiente != null){
+            console.log(aux.siguiente)
             aux = aux.siguiente
         }
+        }
+        
     }
 }

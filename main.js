@@ -14,7 +14,8 @@ class Main{
 
         inventario01.agregar(producto01)
         inventario01.agregar(producto02)
-        inventario01.listarInverso()
+        //inventario01.listarInverso()
+        inventario01.buscar(1000)
     }
 }
 

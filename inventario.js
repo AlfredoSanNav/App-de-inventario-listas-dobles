@@ -18,6 +18,26 @@ export default class Inventario{
         }
     }
 
+    buscar(codigo){
+        if(this.inicio.codigo == codigo){
+            console.log(this.inicio)
+            return this.inicio
+        } else {
+            let aux = this.inicio
+            while(aux.siguiente.codigo != codigo){
+                aux = aux.siguiente
+            }
+            if(aux.siguiente == null){
+                return null
+            } else {
+                console.log(aux.siguiente)
+                return aux.siguiente
+            }
+
+        }
+        
+    }
+
     listar(){
         if(this.inicio == null){
             console.log("La lista está vacía :(")

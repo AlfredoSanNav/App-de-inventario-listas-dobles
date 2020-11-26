@@ -18,6 +18,11 @@ export default class Inventario{
         }
     }
 
+    eliminar(codigo){
+        let eliminado = this.buscar(codigo)
+        
+    }
+
     buscar(codigo){
         if(this.inicio.codigo == codigo){
             console.log(this.inicio)
